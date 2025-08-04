@@ -5,11 +5,11 @@ body{
     align-items: center;
 }
 
-#myP {
+#myP, .myLabel {
     font-size: 3em;
 }
 
-.buttonContainer button {
+button {
     padding: 7px 14px;
     background-color: rgb(17, 178, 236);
     border-radius: 5px;
