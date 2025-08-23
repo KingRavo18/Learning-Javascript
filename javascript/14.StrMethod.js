@@ -16,7 +16,7 @@ console.log(result);
 result = userName.includes(" ");//returns true or false
 console.log(result);
 
-userName = userName.trim();
+userName = userName.trim(); //The trim() method removes whitespace from both sides of a string.
 console.log(userName);
 
 let phoneNumber = "123-545-67";
