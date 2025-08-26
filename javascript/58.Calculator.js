@@ -2,9 +2,7 @@
 
 const display = document.getElementById("display");
 
-const addToDisplay = (input) => {
-    display.textContent += input;
-}
+const addToDisplay = (input) => display.textContent += input;
 const clearDisplay = () => display.textContent = "";
 
 function calculations(){
