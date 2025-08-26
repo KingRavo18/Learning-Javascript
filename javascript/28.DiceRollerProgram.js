@@ -1,17 +1,37 @@
 // DICE ROLLER PROGRAM
 
-function DiceRoller() {
-    const diceAmount = document.getElementById("DiceAmount").value;
-    const diceDisplay = document.getElementById("diceBox");
-    const valueDisplay = document.getElementById("displayedValues");
-    const dice = [];
-    const values = [];
+function rollDice() {
+    const numberOfDice = document.getElementById("numberOfDice"),
+          count = parseInt(numberOfDice.value) || 0,
+          result = document.getElementById("result"),
+          diceContainer = document.getElementById("dice"),
+          numberArray = [],
+          diceArray = [];
 
-    for(let i = 1; i <= diceAmount; i++){
-        const rollResult = Math.floor(Math.random() * 6) + 1;
-        values.push(rollResult);
-        dice.push(`<img src="../images/${rollResult}.png" alt="Dice ${rollResult}"/>`);
+    diceContainer.innerHTML = "";
+
+    if(count < 0 || Number.isNaN(count)) {
+
+        result.textContent = "The number of dice must be a positive number";
+        numberOfDice.value = "";
+        numberOfDice.focus();
+
+    } else if (count === 0) {
+
+        result.textContent = "Please update the number of dice";
+        numberOfDice.focus();
+
+    } else {
+
+        for(let i = 0; i < count; i++){
+            const randomNum = Math.floor(Math.random() * 6) + 1;
+            numberArray.push(randomNum);
+            diceArray.push(`<img src='../images/${randomNum}.png' alt='Dice showing the number ${randomNum}' >`);
+        }
+
+        result.textContent = "Values: " + numberArray.join(", ");
+        diceContainer.innerHTML = diceArray.join("");
     }
-    valueDisplay.textContent = values.join(", ");
-    diceDisplay.innerHTML = dice.join(" ");
 }
+
+
