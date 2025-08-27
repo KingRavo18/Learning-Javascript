@@ -11,27 +11,26 @@ function rollDice() {
     diceContainer.innerHTML = "";
 
     if(count < 0 || Number.isNaN(count)) {
-
         result.textContent = "The number of dice must be a positive number";
-        numberOfDice.value = "";
         numberOfDice.focus();
+        numberOfDice.value = "";
+        return;
+    }
 
-    } else if (count === 0) {
-
+    if (count === 0) {
         result.textContent = "Please update the number of dice";
         numberOfDice.focus();
-
-    } else {
-
-        for(let i = 0; i < count; i++){
-            const randomNum = Math.floor(Math.random() * 6) + 1;
-            numberArray.push(randomNum);
-            diceArray.push(`<img src='../images/${randomNum}.png' alt='Dice showing the number ${randomNum}' >`);
-        }
-
-        result.textContent = "Values: " + numberArray.join(", ");
-        diceContainer.innerHTML = diceArray.join("");
+        return;
     }
+
+    for(let i = 0; i < count; i++){
+        const randomNum = Math.floor(Math.random() * 6) + 1;
+        numberArray.push(randomNum);
+        diceArray.push(`<img src='../images/${randomNum}.png' alt='Dice showing the number ${randomNum}' >`);
+    }
+
+    result.textContent = "Values: " + numberArray.join(", ");
+    diceContainer.innerHTML = diceArray.join("");
 }
 
 
