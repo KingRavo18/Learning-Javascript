@@ -209,3 +209,20 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+.randomPassword-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 110%;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.randomPassword-container button{
+    width: 100px;
+}
