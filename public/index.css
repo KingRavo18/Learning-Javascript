@@ -1,8 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
     background-color: rgb(235, 235, 235);
 }
 
@@ -202,6 +200,7 @@ button {
 }
 
 #myBox{
+    position: relative;
     background-color: lightgreen;
     width: 300px;
     height: 300px;
@@ -209,5 +208,5 @@ button {
     font-weight: bold;
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
