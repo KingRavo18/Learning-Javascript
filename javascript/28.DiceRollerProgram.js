@@ -10,7 +10,7 @@ function rollDice() {
 
     diceContainer.innerHTML = "";
 
-    if(count < 0 || Number.isNaN(count)) {
+    if(count < 0 || isNaN(count)) {
         result.textContent = "The number of dice must be a positive number";
         numberOfDice.focus();
         numberOfDice.value = "";
