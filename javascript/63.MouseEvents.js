@@ -27,12 +27,12 @@ function changeColor(event) {
 
 myButton.addEventListener("click", event => {
     myBox.style.backgroundColor = "tomato";
-    myBox.textContent = "Ouch! 🤕"
+    myBox.textContent = "Ouch! 🤕";
 }); 
 
 myButton.addEventListener("mouseover", event => {
     myBox.style.backgroundColor = "yellow";
-    myBox.textContent = "Nooooo! 😑"
+    myBox.textContent = "Nooooo! 😑";
 });
 
 myButton.addEventListener("mouseout", event => {

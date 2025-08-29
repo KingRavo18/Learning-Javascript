@@ -239,3 +239,9 @@ button {
         background-color: rgb(202, 202, 202);
     }
 }
+
+.myButtons {
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+}
