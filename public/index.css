@@ -245,3 +245,19 @@ button {
     margin: 10px;
     border: none;
 }
+
+.enabled{
+    background-color: red;
+}
+.hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    font-weight: bold;
+}
+.disabled{
+    background-color: black;
+    color: red;
+}
+
+#myH1 {
+    font-size: 5rem;
+}
