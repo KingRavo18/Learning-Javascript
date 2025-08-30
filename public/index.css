@@ -261,3 +261,43 @@ button {
 #myH1 {
     font-size: 5rem;
 }
+
+.RockPaperScissorsButton-container{
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+
+h1, h2{
+    text-align: center;
+}
+
+#computerResult{
+    text-align: center;
+    font-size: 300%;
+}
+
+.RockPaperScissorsButton-container button{
+  font-size: 300%;
+  height: 100px;
+  width: 100px;
+  border: none;
+  border-radius: 50%; 
+}
+
+p{
+    text-align: center;
+}
+
+#result {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.greenText, #playerScore{
+    color: green;
+}
+.redText, #computerScore{
+    color:red;
+}
