@@ -10,22 +10,16 @@
 // 2. CLEAN THE KITCHED
 // 3. TAKE OUT THE TRASH
 
-function walkDog(){
-    
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-
-            const dogWalked = true;
-            if(dogWalked){
-                resolve("You walked the dog 🐶");
-            }else{
-                reject("You DIDN'T WALK THE DOG");
-            }
-
-            
-        }, 1500);
-    });
-}
+let walkDog = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const dogWalked = true;
+        if(dogWalked){
+            resolve("You walked the dog 🐶");
+        }else{
+            reject("You DIDN'T WALK THE DOG");
+        }
+    }, 1500);
+});
 
 function cleanKitchen(){
     
@@ -58,7 +52,7 @@ function takeOutTrash(){
     });
 }
 
-walkDog().then(value => {
+walkDog.then(value => {
     console.log(value); return cleanKitchen()
 }).then(value => {
     console.log(value); return takeOutTrash()
