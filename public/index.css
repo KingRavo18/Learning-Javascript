@@ -416,3 +416,43 @@ button[type="submit"]{
         color: rgba(0, 0, 0, 0.75);
     }
 }
+
+.interest-calculator-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 300px;
+    font-size: 150%;
+    box-shadow: 5px 5px 10px rgb(185, 185, 185);
+
+    & label{
+        font-weight: bold;
+    }
+
+    & input{
+        padding: 5px;
+        text-align: center;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 70%;
+        margin-bottom: 10px;
+    }
+
+    & button{
+        background-color: rgb(4, 211, 4);
+        font-size: 70%;
+        font-weight: bold;
+        border: none;
+
+        &:hover{
+            background-color: rgb(2, 185, 2);
+        }
+    }
+
+    & #result{
+        color: lime;
+        font-size: 100%;
+    }
+}
